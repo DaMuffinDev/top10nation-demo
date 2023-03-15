@@ -1,5 +1,5 @@
-@import url("/src/static/fonts/font-free-awesome-5/css/all.min.css");
-@import url("/src/static/fonts/fontfaces.css");
+@import url("/top10nation-demo/src/static/fonts/font-free-awesome-5/css/all.min.css");
+@import url("/top10nation-demo/src/static/fonts/fontfaces.css");
 :root {
   --title-font: "Josefin Sans", sans-serif;
   --body-font: "Rubik", sans-serif;
