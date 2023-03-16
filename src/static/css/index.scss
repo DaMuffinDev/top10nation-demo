@@ -1,10 +1,11 @@
+@import url("/src/static/css/swiper.css");
+
 #custom-background-css {
 	width: 100%;
 	height: 100%;
 }
 
 .wrapper {
-	background-color: var(--body-bg);
 	overflow: hidden;
 }
 
@@ -230,11 +231,6 @@ button:not(:disabled), [type="button"]:not(:disabled),
 			margin: 2px 2.5px;
 			color: var(--social-icon-color);
 
-			.sc-fb::before {content: "\f09a";}
-			.sc-yt::before {content: "\f167";}
-			.sc-ig::before {content: "\f16d";}
-			.sc-tw::before {content: "\f081";}
-
 			.sc-btn {
 				font-family: "Font Awesome 5 Brands", sans-serif;
 
@@ -275,11 +271,12 @@ button:not(:disabled), [type="button"]:not(:disabled),
 }
 
 .info-right > a, .sc > li > a, .navbar-nav > li > a,
-.menu-item.active > a, #theme-switch {
+.menu-item.active > a, #theme-switch, .search {
 	&:hover {
 		filter: brightness(0.5);
-		transition: all 0.3s ease !important;
 	}
+	
+	transition: all 0.3s ease !important;
 }
 
 .menu-item.active > a {
@@ -288,4 +285,4 @@ button:not(:disabled), [type="button"]:not(:disabled),
 	}
 }
 
-@import url("/top10nation-demo/src/static/css/media.css");
+@import url("/src/static/css/media.css");

@@ -1,8 +1,14 @@
 @import url("/top10nation-demo/src/static/fonts/font-free-awesome-5/css/all.min.css");
 @import url("/top10nation-demo/src/static/fonts/fontfaces.css");
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
 :root {
   --title-font: "Josefin Sans", sans-serif;
   --body-font: "Rubik", sans-serif;
+  --font-awesome-plain: "Font Awesome 6 Free";
   --font-size-tiny: 13px;
   --font-size-small: 16px;
   --font-size-medium: 20px;
@@ -16,7 +22,14 @@
   --text-color: #000;
   --header-wrapper-bg: #fff;
   --body-bg: #eee;
-  --toggle-theme-color: #575757;
+  --blog-box-color: #fff;
+  --blog-text-color: #718096;
+  --blog-box-title-bg: #56566a;
+  --blog-title-hover: #37374e;
+  --blog-img-border-color: #eee;
+  --swiper-font-color: #fff;
+  --swiper-arrow-bg: #000;
+  --toggle-theme-color: #000;
   --toggle-theme-bg: #ccc;
   --slider-bg: #000;
   --social-bg: #f2f2f2;
@@ -30,18 +43,25 @@
 
 :root[data-theme=dark] {
   --text-color: #fff;
-  --header-wrapper-bg: #313138;
-  --body-bg: #393a41;
+  --header-wrapper-bg: #3c3c44;
+  --body-bg: #2b2b31;
+  --blog-box-color: #3c3c44;
+  --blog-text-color: #fff;
+  --blog-box-title-bg: var(--body-bg);
+  --blog-title-hover: #bebebe;
+  --blog-img-border-color: #56566a;
+  --swiper-font-color: #fff;
+  --swiper-arrow-bg: #222222;
   --toggle-theme-color: #ccc;
   --toggle-theme-bg: #232325;
   --slider-bg: #000;
   --social-bg: #222222;
   --social-icon-color: #ccc;
-  --navbar-border-color: #212121;
+  --navbar-border-color: #303030;
   --navbar-icon-bar-color: #dfdfdf;
-  --bxsh: 0 1px 3px rgb(100 100 100 / 15%);
-  --bxshover: 0 4px 60px 0 rgba(100, 100, 100, 0.2);
-  --bxtras: 0 4px 60px 0 rgba(100, 100, 100, 0.2);
+  --bxsh: 0 1px 3px rgba(90, 90, 90, 0.15);
+  --bxshover: 0 4px 60px 0 rgba(90, 90, 90, 0.2);
+  --bxtras: 0 4px 60px 0 rgba(90, 90, 90, 0.2);
 }
 
 * {
@@ -66,23 +86,6 @@ body {
   background-color: var(--body-light-bg);
   width: 100%;
   height: 100%;
-}
-
-a {
-  text-decoration: inherit;
-}
-
-input, button, select, optgroup, textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-feature-settings: "lnum";
-  font-variant-numeric: lining-nums;
-  letter-spacing: 0;
-  text-rendering: optimizeSpeed;
 }
 
 #page {
@@ -154,9 +157,4 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
 }

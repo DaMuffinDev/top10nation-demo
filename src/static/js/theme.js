@@ -1,6 +1,7 @@
 $(function() {
 	const MutationObserver = window.MutationObserver || window.WebkitMutationObserver;
 	const root = document.documentElement;
+	$("#theme-switch").find("#switch").prop("checked", root.dataset.theme === "light" ? true : false);
 
 	const observer = new MutationObserver(function(mutations) {
 		mutations.forEach(record => {
@@ -21,7 +22,7 @@ $(function() {
 		root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
 		const checkbox = $(this).find("#switch");
 
-		checkbox.prop("checked", !checkbox.prop("checked"));
+		checkbox.prop("checked", root.dataset.theme === "light" ? true : false);
 		e.preventDefault();
 	});
 });

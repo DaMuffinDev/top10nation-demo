@@ -1,11 +1,11 @@
-@import url("/top10nation-demo/src/static/css/media.css");
+@import url("/src/static/css/swiper.css");
+@import url("/src/static/css/media.css");
 #custom-background-css {
   width: 100%;
   height: 100%;
 }
 
 .wrapper {
-  background-color: var(--body-bg);
   overflow: hidden;
 }
 
@@ -193,18 +193,6 @@ button:not(:disabled), [type=button]:not(:disabled),
   margin: 2px 2.5px;
   color: var(--social-icon-color);
 }
-.sc li a .sc-fb::before {
-  content: "\f09a";
-}
-.sc li a .sc-yt::before {
-  content: "\f167";
-}
-.sc li a .sc-ig::before {
-  content: "\f16d";
-}
-.sc li a .sc-tw::before {
-  content: "\f081";
-}
 .sc li a .sc-btn {
   font-family: "Font Awesome 5 Brands", sans-serif;
   display: inline-flex;
@@ -232,10 +220,13 @@ button:not(:disabled), [type=button]:not(:disabled),
   transition: all 0.8s;
 }
 
-.info-right > a:hover, .sc > li > a:hover, .navbar-nav > li > a:hover,
-.menu-item.active > a:hover, #theme-switch:hover {
-  filter: brightness(0.5);
+.info-right > a, .sc > li > a, .navbar-nav > li > a,
+.menu-item.active > a, #theme-switch, .search {
   transition: all 0.3s ease !important;
+}
+.info-right > a:hover, .sc > li > a:hover, .navbar-nav > li > a:hover,
+.menu-item.active > a:hover, #theme-switch:hover, .search:hover {
+  filter: brightness(0.5);
 }
 
 .menu-item.active > a:hover {
