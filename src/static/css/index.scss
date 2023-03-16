@@ -1,4 +1,5 @@
 @import url("/top10nation-demo/src/static/css/swiper.css");
+@import url("/top10nation-demo/src/static/css/media.css");
 
 #custom-background-css {
 	width: 100%;
@@ -284,5 +285,3 @@ button:not(:disabled), [type="button"]:not(:disabled),
 		background: rgba(0, 0, 0, 0.1);
 	}
 }
-
-@import url("/src/static/css/media.css");
