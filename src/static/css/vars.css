@@ -16,6 +16,8 @@
   --font-size-x-large: 42px;
   --row-gutter-x: 1.5rem;
   --row-gutter-y: 0;
+  --rank-1-bg: #56566a;
+  --rating-star-color: #ffa41c;
 }
 
 :root[data-theme=light] {
@@ -26,7 +28,10 @@
   --blog-text-color: #718096;
   --blog-box-title-bg: #56566a;
   --blog-title-hover: #37374e;
-  --blog-img-border-color: #eee;
+  --blog-border-color: #eee;
+  --blog-border: solid 5px var(--blog-border-color);
+  --blog-link-bg: #54595e;
+  --blog-link-border: #4b4e52;
   --swiper-font-color: #fff;
   --swiper-arrow-bg: #000;
   --toggle-theme-color: #000;
@@ -49,7 +54,10 @@
   --blog-text-color: #fff;
   --blog-box-title-bg: var(--body-bg);
   --blog-title-hover: #bebebe;
-  --blog-img-border-color: #56566a;
+  --blog-border-color: #56566a;
+  --blog-border: solid 5px var(--blog-border-color);
+  --blog-link-bg: #35353d;
+  --blog-link-border: #2d2d33;
   --swiper-font-color: #fff;
   --swiper-arrow-bg: #222222;
   --toggle-theme-color: #ccc;
@@ -91,6 +99,13 @@ body {
 #page {
   width: 100%;
   height: 100%;
+}
+
+#custom-background-css {
+  width: 100%;
+  height: 100%;
+  overflow: scroll !important;
+  scroll-behavior: smooth !important;
 }
 
 .row {

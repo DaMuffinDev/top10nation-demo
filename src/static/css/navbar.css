@@ -1,14 +1,3 @@
-@import url("/top10nation-demo/src/static/css/swiper.css");
-@import url("/top10nation-demo/src/static/css/media.css");
-#custom-background-css {
-  width: 100%;
-  height: 100%;
-}
-
-.wrapper {
-  overflow: hidden;
-}
-
 .header-wp {
   background-color: var(--header-wrapper-bg);
 }
@@ -79,11 +68,6 @@
   transform-origin: 10% 90%;
 }
 
-button:not(:disabled), [type=button]:not(:disabled),
-[type=reset]:not(:disabled), [type=submit]:not(:disabled) {
-  cursor: pointer;
-}
-
 .site-title {
   font-family: var(--title-font);
   line-height: 1.2;
@@ -101,14 +85,6 @@ button:not(:disabled), [type=button]:not(:disabled),
 }
 .site-branding-text .site-description {
   transition: color 0.3s ease;
-}
-
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--bs-gutter-x, 0.75rem);
-  padding-right: var(--bs-gutter-x, 0.75rem);
 }
 
 .navbar {
@@ -145,21 +121,6 @@ button:not(:disabled), [type=button]:not(:disabled),
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
-}
-
-.collapse:not(.show) {
-  display: none;
-}
-
-.collapsing {
-  height: 0;
-  overflow: hidden;
-  transition: height 0.35s ease;
-}
-
-.mx-auto {
-  margin-right: auto !important;
-  margin-left: auto !important;
 }
 
 .right-nav a {

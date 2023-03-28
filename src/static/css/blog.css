@@ -86,6 +86,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 50%;
   width: 35px;
   height: 35px;
   opacity: 1;
@@ -93,7 +94,6 @@
   color: var(--swiper-font-color);
   background: var(--swiper-arrow-bg);
   margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
-  top: 50%;
   z-index: 10;
   transition: all 0.3s ease;
 }
@@ -138,7 +138,8 @@
 }
 
 .blog-post {
-  margin-bottom: 30px;
+  position: relative;
+  margin-bottom: 50px;
   box-shadow: var(--bxsh);
   overflow: hidden;
   border-radius: 0;
@@ -147,10 +148,15 @@
 .blog-post .title {
   margin-bottom: 20px;
 }
-.blog-post a:not(.categories), .blog-post h4 {
+.blog-post .blog-header .title a,
+.blog-post .blog-title .title > a,
+.blog-post .blog-ranking > .item {
   transition: color 0.5s ease;
+  cursor: pointer;
 }
-.blog-post a:not(.categories):hover, .blog-post h4:hover {
+.blog-post .blog-header .title a:hover,
+.blog-post .blog-title .title > a:hover,
+.blog-post .blog-ranking > .item:hover {
   color: var(--blog-title-hover);
 }
 .blog-post p:nth-of-type(1)::first-letter {
@@ -172,6 +178,14 @@
   margin-bottom: auto;
 }
 
+/* TODO: Favorites
+.blog-favorite {
+	position: absolute;
+	top: 3px;
+	right: 10px;
+
+	font-size: 28px;
+}*/
 .list-blog .blog-category {
   justify-content: flex-start;
 }
@@ -239,6 +253,7 @@
   display: inline-block;
   padding-left: 1px;
   padding-right: 2px;
+  margin-right: 3.2px;
   font-family: var(--font-awesome-plain);
   font-weight: 900;
   text-decoration: inherit;
@@ -248,10 +263,10 @@
 }
 
 .back-img {
-  background-size: cover !important;
+  background-size: contain !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  border: solid 5px var(--blog-img-border-color);
+  border: var(--blog-border);
 }
 
 .blog-thumb {
@@ -264,11 +279,11 @@
 
 .link-div {
   display: block;
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  position: absolute;
 }
 
 @media (max-width: 767.98px) {
@@ -276,6 +291,7 @@
     width: 100% !important;
     max-width: 100% !important;
     margin-bottom: 15px;
+    margin-left: 25px;
   }
   .list-blog.blog-post {
     flex-direction: column;
